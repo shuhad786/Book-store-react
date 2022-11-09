@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+}
+
+.Logo {
+  font-size: 2em;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  width: 13%;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.displayContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
+}
+
+.displayBooks {
+  border: 1px solid black;
+  padding: 1em;
+}
+
+.book {
+  width: min-content;
+}
+
+.removeBtn {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: max-content;
+  border-radius: 5px;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1em;
+  border: 1px solid black;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 10px;
+  padding: 1em;
+}
+
+.input {
+  width: min-content;
+}
+
+.submitBtn {
+  border: none;
+  width: min-content;
+  border-radius: 5px;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+}
+
+.statusBtn {
+  border: none;
+  border-radius: 5px;
+}
