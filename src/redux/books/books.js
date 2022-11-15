@@ -7,31 +7,28 @@ const booksReducer = (state = initialState, action) => {
     case ADD_BOOK:
       return [
         ...state,
-        action.book
-      ]
-    
+        action.book,
+      ];
+
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.id)
+      return state.filter((book) => book.id !== action.id);
 
     default:
-      return state
+      return state;
   }
-
 };
 
 export const addBook = (payload) => {
-  const {id, title, author} = payload;
+  const { id, title, author } = payload;
   return {
     type: ADD_BOOK,
-    book: {id, title, author}
-  }
+    book: { id, title, author },
+  };
 };
 
-export const removeBook = (id) => {
-  return {
-    type: REMOVE_BOOK,
-    id
-  }
-};
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  id,
+});
 
 export default booksReducer;

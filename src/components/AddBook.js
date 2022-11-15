@@ -10,18 +10,18 @@ const AddBook = () => {
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newBook = { id: uuidv4(), title: dataTitle, author: dataAuthor }
+    const newBook = { id: uuidv4(), title: dataTitle, author: dataAuthor };
     setTitle('');
     setAuthor('');
     dispatch(addBook(newBook));
   };
 
   return (
-    <div className="formContainer" >
+    <div className="formContainer">
       <form className="form" onSubmit={handleSubmit}>
-        <label>Add a new book</label>
-        <input className="input" onChange={(e) => setTitle(e.target.value)} value={ dataTitle } type="text" placeholder="Enter book title"/>
-        <input className="input" onChange={(e) => setAuthor(e.target.value)} value={ dataAuthor } type="text" placeholder="Enter the authors name"/>
+        Add a new book
+        <input className="input" onChange={(e) => setTitle(e.target.value)} value={dataTitle} type="text" placeholder="Enter book title" />
+        <input className="input" onChange={(e) => setAuthor(e.target.value)} value={dataAuthor} type="text" placeholder="Enter the authors name" />
         <button type="submit" className="submitBtn">Submit</button>
       </form>
     </div>
