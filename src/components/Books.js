@@ -1,17 +1,13 @@
 /* eslint-disable */
-import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 import AddBook from './AddBook';
 
 const Books = () => {
-  let [data, setData] = useState([]);
-
-  useEffect(() => {
-    setData([{id: 1, title:'awesome', author: 'book'}, {id: 2, title:'took', author: 'shop'}]);
-  }, []);
+  const data = useSelector((state) => state.book);
   
   return (
-    <div className='displayContainer' >
+    <div className='displayContainer'>
       { 
       data && 
         data.map((item) => {
