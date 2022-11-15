@@ -9,7 +9,14 @@ const Books = () => {
     <div className="displayContainer">
       {
       data
-        && data.map((item) => <BookItem key={item.id} title={item.title} author={item.author} id={item.id} />)
+        && data.map((item) => (
+          <BookItem
+            key={item.id}
+            title={item.title}
+            author={item.author}
+            id={item.id}
+          />
+        ))
       }
       <AddBook />
     </div>
