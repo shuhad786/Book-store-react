@@ -10,6 +10,7 @@
 - CSS.
 - Linters.
 - React.
+- Redux
 
 ## Author
 

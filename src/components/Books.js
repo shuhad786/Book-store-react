@@ -1,26 +1,26 @@
-/* eslint-disable */
-import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 import AddBook from './AddBook';
 
 const Books = () => {
-  let [data, setData] = useState([]);
+  const data = useSelector((state) => state.book);
 
-  useEffect(() => {
-    setData([{id: 1, title:'awesome', author: 'book'}, {id: 2, title:'took', author: 'shop'}]);
-  }, []);
-  
   return (
-    <div className='displayContainer' >
-      { 
-      data && 
-        data.map((item) => {
-      return <BookItem key={item.id} title={item.title} author={item.author} id={item.id} />
-      }) 
+    <div className="displayContainer">
+      {
+      data
+        && data.map((item) => (
+          <BookItem
+            key={item.id}
+            title={item.title}
+            author={item.author}
+            id={item.id}
+          />
+        ))
       }
       <AddBook />
     </div>
-  )
-}
+  );
+};
 
 export default Books;
