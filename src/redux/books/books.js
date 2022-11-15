@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 const ADD_BOOK = 'BOOK_ADDED';
 const REMOVE_BOOK = 'BOOK_REMOVED';
 const initialState = [];

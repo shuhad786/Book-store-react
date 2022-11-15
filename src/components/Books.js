@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 import AddBook from './AddBook';

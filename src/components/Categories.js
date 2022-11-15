@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import { checkStatus } from '../redux/categories/categories';
 import { useDispatch, useSelector } from 'react-redux';

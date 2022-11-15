@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { IoTrashBin } from 'react-icons/io5';
