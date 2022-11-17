@@ -1,6 +1,7 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 
 const AddBook = () => {
@@ -10,7 +11,7 @@ const AddBook = () => {
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newBook = { id: uuidv4(), title: dataTitle, author: dataAuthor };
+    const newBook = { id: uuidv4(), title: dataTitle, author: dataAuthor, category: ''};
     setTitle('');
     setAuthor('');
     dispatch(addBook(newBook));
