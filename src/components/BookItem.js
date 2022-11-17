@@ -11,19 +11,17 @@ const BookItem = (props) => {
   };
 
   return (
-    <section className="displayBooks">
+    <div className="displayBooks">
       <p className="book">
-        {' '}
-        Title:
+        Title: &nbsp;&nbsp;
         {title}
       </p>
       <p className="book">
-        {' '}
-        Author:
+        Author: &nbsp;&nbsp;
         {author}
       </p>
-      <button type="button" className="removeBtn" onClick={() => deleteBook(id)}>Remove</button>
-    </section>
+      <button type="button" className="button" onClick={() => deleteBook(id)}>Remove</button>
+    </div>
   );
 };
 

@@ -13,20 +13,22 @@ const Books = () => {
   }, [dispatch]);
 
   return (
-    <div className="displayContainer">
-      {
-      data
-        && data.map((item) => (
-          <BookItem
-            key={item.id}
-            title={item.title}
-            author={item.author}
-            id={item.id}
-          />
-        ))
-      }
+    <>
+      <div className="displayContainer">
+        {
+        data
+          && data.map((item) => (
+            <BookItem
+              key={item.id}
+              title={item.title}
+              author={item.author}
+              id={item.id}
+            />
+          ))
+        }
+      </div>
       <AddBook />
-    </div>
+    </>
   );
 };
 
