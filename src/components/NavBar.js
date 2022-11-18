@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => (
-  <div className="navBar">
+  <nav className="navBar">
     <div className="Logo">
-      Book Store
+      Book Store CMS
     </div>
     <ul className="links">
-      <Link className="link" to="/">Book List</Link>
-      <Link className="link" to="/category">Category</Link>
+      <NavLink className="link" to="/">Books</NavLink>
+      <NavLink className="link" to="/category">Category</NavLink>
     </ul>
-  </div>
+  </nav>
 );
 
 export default Navbar;

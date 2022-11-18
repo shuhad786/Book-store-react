@@ -14,16 +14,19 @@ const AddBook = () => {
     const newBook = { id: uuidv4(), title: dataTitle, author: dataAuthor, category: ''};
     setTitle('');
     setAuthor('');
-    dispatch(addBook(newBook));
+    if (dataTitle && dataAuthor) {
+      dispatch(addBook(newBook));
+    }
   };
 
   return (
     <div className="formContainer">
+    <div className="horizontal-line" />
+    <label className='label'>Add a new book</label>
       <form className="form" onSubmit={handleSubmit}>
-        Add a new book
         <input className="input" onChange={(e) => setTitle(e.target.value)} value={dataTitle} type="text" placeholder="Enter book title" />
         <input className="input" onChange={(e) => setAuthor(e.target.value)} value={dataAuthor} type="text" placeholder="Enter the authors name" />
-        <button type="submit" className="submitBtn">Submit</button>
+        <button type="submit" className="buttonBlue">Add Book</button>
       </form>
     </div>
   );

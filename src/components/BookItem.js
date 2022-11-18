@@ -11,19 +11,37 @@ const BookItem = (props) => {
   };
 
   return (
-    <section className="displayBooks">
-      <p className="book">
-        {' '}
-        Title:
-        {title}
-      </p>
-      <p className="book">
-        {' '}
-        Author:
-        {author}
-      </p>
-      <button type="button" className="removeBtn" onClick={() => deleteBook(id)}>Remove</button>
-    </section>
+    <div className="displayBooks">
+      <div className="book-start">
+        <p className="grey-text-1">Action</p>
+        <p className="book-title">
+          {title}
+        </p>
+        <p className="book-author">
+          {author}
+        </p>
+        <ul className="buttonOrder">
+          <button type="button" className="buttonClear">Comments</button>
+          <div className="vertical-line" />
+          <button type="button" className="buttonClear" onClick={() => deleteBook(id)}>Remove</button>
+          <div className="vertical-line" />
+          <button type="button" className="buttonClear">Edit</button>
+        </ul>
+      </div>
+      <div className="book-right-end">
+        <div className="rectangle" />
+        <div>
+          <p className="black-text">43%</p>
+          <p className="grey-text">completed</p>
+        </div>
+        <span className="vertical-line-2" />
+        <div className="book-right-end-2">
+          <p className="grey-text-2">CURRENT CHARPTER</p>
+          <p className="black-text-2">New charpter: &quot;Charpter 1&quot;</p>
+          <button type="button" className="buttonBlue2">UPDATE PROGRESS</button>
+        </div>
+      </div>
+    </div>
   );
 };
 
