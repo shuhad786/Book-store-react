@@ -18,7 +18,7 @@ const Category = () => {
     <div className="category">
       {
         !isButtonClicked
-          ? <button type="button" className={`button && ${displayNone}`} onClick={btnStatus}>Check status</button>
+          ? <button type="button" className={`buttonBlue && ${displayNone}`} onClick={btnStatus}>Check status</button>
           : <p className="categoryError">{text}</p>
       }
     </div>

@@ -8,8 +8,8 @@ import Navbar from './components/NavBar';
 function App() {
   return (
     <>
-      <Navbar />
       <div className="container">
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Books />} />
           <Route exact path="/category" element={<Category />} />
