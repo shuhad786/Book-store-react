@@ -23,9 +23,9 @@ const BookItem = (props) => {
         <ul className="buttonOrder">
           <button type="button" className="buttonClear">Comments</button>
           <div className="vertical-line" />
-          <button type="button" className="buttonClear">Edit</button>
-          <div className="vertical-line" />
           <button type="button" className="buttonClear" onClick={() => deleteBook(id)}>Remove</button>
+          <div className="vertical-line" />
+          <button type="button" className="buttonClear">Edit</button>
         </ul>
       </div>
       <div className="book-right-end">
